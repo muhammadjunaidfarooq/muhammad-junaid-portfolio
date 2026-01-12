@@ -5,7 +5,6 @@ import {
   SunIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { isMotionValue } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";

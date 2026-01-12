@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Junaid",
+  title: "Muhammad Junaid - SWE",
   description: "Full Stack Developer",
 };
 

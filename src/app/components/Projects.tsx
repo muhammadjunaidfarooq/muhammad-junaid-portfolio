@@ -101,7 +101,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
                   whileTap={{ scale: 0.95 }}
-                  href={project.githubLink}
+                  href={project.demoLink}
                   target="_blank"
                   className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
                 >
