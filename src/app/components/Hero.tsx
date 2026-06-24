@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeInUp, scaleIn } from "@/utils/animations";
 
 const Hero = () => {
-  return (
-    <section className="py-28">
+  return (<>
+    <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
@@ -38,41 +38,40 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
           >
-            Full Stack Developer | UI/UX Enthusiast | Open Source Contributer
+            Software Engineering Graduate (‘26) | MERN & Next.js Developer |
+            React, Node.js, MongoDB, Express.js | JavaScript, Python | Exploring
+            AI Integration
           </motion.p>
 
           <motion.div
             {...fadeInUp}
             transition={{ delay: 0.5 }}
-            className="flex justify-center space-x-4 mb-8"
+            className="flex justify-center space-x-6 mb-8"
           >
             <motion.a
+              href="https://github.com/muhammadjunaidfarooq"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub Profile"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              href="/"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
             >
               <FaGithub />
             </motion.a>
+
             <motion.a
+              href="https://www.linkedin.com/in/muhammadjunaidfarooq"
+              target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              href="/"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
             >
               <FaLinkedin />
             </motion.a>
-            <motion.a
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              href="/"
-              className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
-            >
-              <FaInstagram />
-            </motion.a>
+
           </motion.div>
 
           <motion.div
@@ -101,6 +100,8 @@ const Hero = () => {
         </div>
       </div>
     </section>
+
+    </>
   );
 };
 

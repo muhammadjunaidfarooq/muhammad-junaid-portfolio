@@ -9,9 +9,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
+import Image from "next/image";
 
 const Navbar = () => {
-  const {theme, toggleTheme} = useTheme()
+  const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const pathname = usePathname();
   const toggleMobileMenu = () => {
@@ -22,7 +23,6 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/projects", label: "Projects" },
-    { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -31,8 +31,19 @@ const Navbar = () => {
       <div className="container max-w-7xl mx-auto px-4">
         {/* Desktop menu */}
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-primary">
-            Devfolio&trade;
+          <Link
+            href="/"
+            className="flex items-center gap-3 text-xl font-bold text-primary"
+          >
+            <Image
+              src="/static/images/portfolio-brand-icon.png"
+              alt="Muhammad Junaid"
+              width={36}
+              height={36}
+              priority
+            />
+
+            <span>Muhammad Junaid</span>
           </Link>
 
           {/* Desktop menus */}
@@ -51,7 +62,10 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <button onClick={toggleTheme} className="p-2 rounded-lg hover:bg-gray-100 dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            >
               {theme === "dark" ? (
                 <SunIcon className="w-5 h-5" />
               ) : (
@@ -97,7 +111,10 @@ const Navbar = () => {
                 );
               })}
               <div>
-                <button onClick={toggleTheme} className="flex items-center py-2 hover:text-primary  transition-colors cursor-pointer">
+                <button
+                  onClick={toggleTheme}
+                  className="flex items-center py-2 hover:text-primary  transition-colors cursor-pointer"
+                >
                   {theme === "dark" ? (
                     <>
                       <SunIcon className="w-5 h-5 mr-2" /> Light Mode

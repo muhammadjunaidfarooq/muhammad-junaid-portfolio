@@ -13,7 +13,7 @@ import {
 
 const About = () => {
   return (
-    <div className="container max-w-7xl mx-auto py-20">
+    <div className="container max-w-7xl mx-auto py-10">
       <motion.h1
         {...fadeInDown}
         className="text-4xl font-bold mb-8 text-center"
@@ -22,15 +22,18 @@ const About = () => {
       </motion.h1>
 
       {/* Bio Section */}
-      <motion.section {...fadeInUp} className="mb-16">
+      <motion.section {...fadeInUp} className="mb-10">
         <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
-          A highly skilled and motivated Full Stack Developer, specializing in
-          JavaScript. Proficient in building robust and scalable web
-          applications using modern web technologies. Demonstrates strong
-          problem-solving abilities and a passion for delivering high-quality
-          software solutions. Committed to staying updated with the latest
-          industry trends and continuously improving skills to enhance
-          productivity and efficiency.
+          Software Engineering graduate with a 3.7 CGPA and practical experience
+          developing full-stack web applications using the MERN stack and
+          Next.js. Skilled in designing responsive user interfaces, building
+          RESTful APIs, integrating third-party services, and deploying scalable
+          web solutions.
+          <br />
+          Passionate about creating high-quality digital experiences, learning
+          new technologies, and solving real-world problems through software.
+          Currently seeking opportunities to contribute as a Software Engineer,
+          Full-Stack Developer, MERN Stack Developer, or Next.js Developer.
         </p>
       </motion.section>
 
@@ -53,10 +56,11 @@ const About = () => {
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="text-secondary space-y-2">
-              <li>React / Next.js</li>
-              <li>TypeScript</li>
-              <li>Tailwind CSS</li>
-              <li>HTML5 / CSS3</li>
+              <li>React.js / Next.js</li>
+              <li>JavaScript / TypeScript</li>
+              <li>Redux Toolkit / React Query</li>
+              <li>Tailwind CSS / Material UI</li>
+              <li>HTML5 / CSS3 / Bootstrap</li>
             </ul>
           </motion.div>
 
@@ -66,12 +70,12 @@ const About = () => {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
           >
             <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Backend</h3>
+            <h3 className="text-xl font-semibold mb-2">Backend & Database</h3>
             <ul className="text-secondary space-y-2">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
+              <li>Node.js / Express.js</li>
+              <li>RESTful APIs</li>
+              <li>JWT Authentication</li>
+              <li>MongoDB</li> <li>MySQL</li>
             </ul>
           </motion.div>
 
@@ -81,12 +85,13 @@ const About = () => {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
           >
             <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
+            <h3 className="text-xl font-semibold mb-2">Tools, Cloud & APIs</h3>
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub</li>
-              <li>Docker</li>
-              <li>AWS</li>
-              <li>CI/CD</li>
+              <li>Vercel / Render</li>
+              <li>Cloudinary</li>
+              <li>Mapbox API</li>
+              <li>Python</li>
             </ul>
           </motion.div>
         </motion.div>
@@ -110,15 +115,41 @@ const About = () => {
             transition={{ type: "spring", stiffness: 300 }}
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
           >
-            <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
-            <p className="text-primary mb-2">thriver • 2025 - Present</p>
+            <h3 className="text-xl font-semibold mb-2">
+              {" "}
+              Web Development Intern{" "}
+            </h3>{" "}
+            <p className="text-primary mb-2">
+              {" "}
+              Arch Technologies (Remote) • Dec 2025 – Jan 2026{" "}
+            </p>{" "}
             <ul className="text-secondary space-y-2 list-disc list-inside">
-              <li>Developed and maintained RESTful APIs</li>
+              {" "}
               <li>
-                Build responsive user interfaces with modern JavaScript
-                frameworks
-              </li>
-              <li>Optimized database queries improving performance by 40%</li>
+                {" "}
+                Engineered a full-stack social networking platform using React,
+                Node.js, Express.js, and MongoDB.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Implemented JWT-based authentication and authorization for
+                secure access control.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Managed application state with Redux Toolkit to improve UI
+                responsiveness and maintainability.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Built a dynamic social feed system leveraging MongoDB
+                .populate() for efficient relational data retrieval.{" "}
+              </li>{" "}
+              <li>
+                {" "}
+                Applied Git feature-branching workflows and Conventional Commits
+                to maintain a scalable codebase.{" "}
+              </li>{" "}
             </ul>
           </motion.div>
         </motion.div>
@@ -143,14 +174,23 @@ const About = () => {
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
           >
             <h3 className="text-xl font-semibold mb-2">
-              Bachelor's of Software Engineering
-            </h3>
+              {" "}
+              Bachelor of Science in Software Engineering{" "}
+            </h3>{" "}
             <p className="text-primary mb-2">
-              The Islamia University of Bahawalpur (IUB) • 2022 - 2026
-            </p>
+              {" "}
+              The Islamia University of Bahawalpur (IUB) • 2022 – 2026{" "}
+            </p>{" "}
             <p className="text-secondary">
-              Graduated with honors. Focused on software engineering and wev
-              development.
+              {" "}
+              Graduated with a{" "}
+              <span className="inline-block px-3 py-1 rounded-full text-sm bg-primary/10 text-primary">
+                CGPA: 3.7 / 4.0
+              </span>
+              . Focused on Full-Stack Web Development using the MERN Stack and
+              Next.js, with coursework in Database Systems, Software
+              Engineering, Web Development, Operating Systems, and Computer
+              Networks.{" "}
             </p>
           </motion.div>
         </motion.div>

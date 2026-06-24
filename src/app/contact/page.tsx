@@ -98,7 +98,7 @@ const ContactPage = () => {
                   href="mailto:junaidfarooq202@gmail.com"
                   className="text-secondary hover:text-primary"
                 >
-                  junaidfarooq202@gmail.com
+                  junaidfarooq.pk@gmail.com
                 </Link>
               </div>
             </motion.div>
@@ -113,10 +113,10 @@ const ContactPage = () => {
               <div>
                 <h3 className="font-semibold ">Phone</h3>
                 <Link
-                  href="tel:+923030301270"
+                  href="tel:+923001792770"
                   className="text-secondary hover:text-primary"
                 >
-                  +92 3030301270
+                  +92 3001792770
                 </Link>
               </div>
             </motion.div>

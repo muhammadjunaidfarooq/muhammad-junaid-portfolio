@@ -1,14 +1,35 @@
 import { NextResponse } from "next/server";
-
-interface ContactRequestBody {
-  name: string;
-  email: string;
-  message: string;
-}
+import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
-    (await request.json()) as ContactRequestBody;
+    const { name, email, message } = await request.json();
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: "junaidfarooq.pk@gmail.com",
+      subject: `Portfolio Contact from ${name}`,
+      html: `
+        <h2>New Contact Message</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+
+        <p><strong>Email:</strong> ${email}</p>
+
+        <p><strong>Message:</strong></p>
+
+        <p>${message}</p>
+      `,
+    });
+
     return NextResponse.json(
       {
         message: "Message sent successfully!",
@@ -16,15 +37,13 @@ export async function POST(request: Request) {
       { status: 200 }
     );
   } catch (error) {
-    const errorMessage =
-      error instanceof Error ? error.message : "Failed to send message";
+    console.error(error);
+
     return NextResponse.json(
       {
-        message: errorMessage,
+        message: "Failed to send message",
       },
-      {
-        status: 500,
-      }
+      { status: 500 }
     );
   }
 }
