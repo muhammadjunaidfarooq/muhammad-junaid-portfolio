@@ -79,7 +79,7 @@ const ResumeSection = () => {
 
     <div className="flex justify-center mt-8">
       <a
-        href="/resume.pdf"
+        href="/MuhammadJunaidFarooqResume.pdf"
         download
         className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-all"
       >
