@@ -110,14 +110,19 @@ const Hero = () => {
               transition={{ delay: 0.7 }}
               className="mt-4 flex justify-center"
             >
-              <a
-                href="/Muhammad_Junaid_Farooq_Resume.pdf"
-                download
-                className="inline-flex items-center justify-center gap-2 bg-gray-500 text-white hover:text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <FaDownload />
-                Download Resume
-              </a>
+                <a
+                  href="/Muhammad_Junaid_Farooq_Resume.pdf"
+                  download
+                  className="inline-flex items-center justify-center gap-2 bg-gray-500 text-white hover:text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors"
+                >
+                  <FaDownload />
+                  Download Resume
+                </a>
+              </motion.div>
             </motion.div>
           </div>
         </div>
