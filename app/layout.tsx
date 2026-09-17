@@ -18,7 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://muhammadjunaid-swe.vercel.app'),
+  metadataBase: new URL('https://muhammadjunaidfarooq.vercel.app'),
   title: 'Muhammad Junaid Farooq — Portfolio',
   description: "I'm Muhammad Junaid Farooq, an AI/ML Engineer and Software Engineering graduate with a strong foundation in full-stack development (MERN stack + Next.js), now expanding into AI/ML, Deep Learning, Generative AI, and Computer Vision.",
   authors: [{ name: "Muhammad Junaid Farooq" }],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Muhammad Junaid Farooq — Portfolio',
     description: "I'm Muhammad Junaid Farooq, an AI/ML Engineer and Software Engineering graduate with a strong foundation in full-stack development (MERN stack + Next.js), now expanding into AI/ML...",
-    url: 'https://muhammadjunaid-swe.vercel.app',
+    url: 'https://muhammadjunaidfarooq.vercel.app',
     siteName: "Muhammad Junaid Farooq's Portfolio",
     images: '/images/og-image.png',
     locale: 'en_US',

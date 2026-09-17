@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://muhammadjunaid-swe.vercel.app/sitemap.xml
+Sitemap: https://muhammadjunaidfarooq.vercel.app/sitemap.xml

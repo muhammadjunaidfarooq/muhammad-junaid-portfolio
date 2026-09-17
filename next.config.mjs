@@ -16,7 +16,7 @@ const nextConfig = {
 
   // Ensure proper environment variable handling
   env: {
-    NEXT_PUBLIC_BASE_URL: process.env.NODE_ENV === 'production' ? 'https://muhammadjunaid-swe.vercel.app' : 'http://localhost:3000'
+    NEXT_PUBLIC_BASE_URL: process.env.NODE_ENV === 'production' ? 'https://muhammadjunaidfarooq.vercel.app' : 'http://localhost:3000'
   },
 
   // Configure headers for proper asset serving.

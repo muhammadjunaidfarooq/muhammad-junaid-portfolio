@@ -2,10 +2,7 @@ import { Resend } from 'resend';
 import { render } from '@react-email/components';
 import React from 'react';
 import AdminNotificationEmail from '@/emails/AdminNotification';
-import {
-  PROJECT_TYPE_LABELS,
-  BUDGET_LABELS,
-} from '@/lib/project-labels';
+import { PROJECT_TYPE_LABELS } from '@/lib/project-labels';
 
 // Lazy/guarded: constructing Resend with no key throws synchronously, which
 // would crash this module's import (and the whole /api/contacts route) before
@@ -48,8 +45,7 @@ export async function sendAdminNotificationEmail(data: ContactFormData) {
     const fromEmail = 'Portfolio Contact <onboarding@resend.dev>';
 
     const projectTypeLabel = PROJECT_TYPE_LABELS[data.projectType] || data.projectType;
-    const budgetLabel = BUDGET_LABELS[data.budget] || data.budget;
-    const subject = `New lead — ${budgetLabel} · ${projectTypeLabel} — ${data.fullname}`;
+    const subject = `New Lead – ${projectTypeLabel}`;
 
     const result = await resend.emails.send({
       from: fromEmail,

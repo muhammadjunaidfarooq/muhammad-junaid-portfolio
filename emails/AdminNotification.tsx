@@ -87,13 +87,6 @@ export const AdminNotificationEmail = ({
           <Heading style={h1} className="heading">
             {fullname}
           </Heading>
-          <Text style={alertText}>
-            <strong style={highlight}>{budgetLabel}</strong>
-            {' · '}
-            <strong>{projectTypeLabel}</strong>
-            {' · '}
-            {timelineLabel}
-          </Text>
 
           {/* Client Information Box */}
           <Section style={infoBox} className="info-box">
@@ -178,8 +171,8 @@ export const AdminNotificationEmail = ({
 
           <Text style={footer}>
             Sent from the contact form at{' '}
-            <Link href="https://muhammadjunaid-swe.vercel.app/contact" style={linkStyle}>
-              muhammadjunaid-swe.vercel.app
+            <Link href="https://muhammadjunaidfarooq.vercel.app/contact" style={linkStyle}>
+              muhammadjunaidfarooq.vercel.app
             </Link>
           </Text>
         </Container>
@@ -263,19 +256,6 @@ const h2 = {
   fontSize: '16px',
   fontWeight: 'bold',
   margin: '0 0 12px 0',
-};
-
-const alertText = {
-  color: '#e0e0e0',
-  fontSize: '16px',
-  textAlign: 'center' as const,
-  margin: '0 0 16px 0',
-  lineHeight: '1.5',
-};
-
-const highlight = {
-  color: '#ffd95a',
-  fontWeight: 'bold' as const,
 };
 
 const infoBox = {

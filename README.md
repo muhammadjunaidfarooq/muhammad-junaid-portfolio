@@ -2,7 +2,7 @@
 
 Personal portfolio of **Muhammad Junaid Farooq**, an AI/ML Engineer and Software Engineering graduate. Built with Next.js, TypeScript, and Tailwind CSS, with an email-only contact form powered by Resend.
 
-- **Portfolio:** https://muhammadjunaid-swe.vercel.app
+- **Portfolio:** https://muhammadjunaidfarooq.vercel.app
 - **GitHub:** https://github.com/muhammadjunaidfarooq
 - **LinkedIn:** https://www.linkedin.com/in/muhammadjunaidfarooq
 - **Email:** junaidfarooq.pk@gmail.com

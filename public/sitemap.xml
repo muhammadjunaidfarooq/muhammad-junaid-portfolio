@@ -5,7 +5,7 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Homepage -->
   <url>
-    <loc>https://muhammadjunaid-swe.vercel.app</loc>
+    <loc>https://muhammadjunaidfarooq.vercel.app</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -13,7 +13,7 @@
 
   <!-- Resume Page -->
   <url>
-    <loc>https://muhammadjunaid-swe.vercel.app/resume</loc>
+    <loc>https://muhammadjunaidfarooq.vercel.app/resume</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -21,7 +21,7 @@
 
   <!-- Portfolio Page -->
   <url>
-    <loc>https://muhammadjunaid-swe.vercel.app/portfolio</loc>
+    <loc>https://muhammadjunaidfarooq.vercel.app/portfolio</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -29,7 +29,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://muhammadjunaid-swe.vercel.app/contact</loc>
+    <loc>https://muhammadjunaidfarooq.vercel.app/contact</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
