@@ -1,12 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static asset optimization
-  output: 'standalone',
-  
-  // Configure base path and asset prefix
-  basePath: '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://muhammadjunaid-swe.vercel.app' : '',
-  
   // Configure trailing slashes for consistency
   trailingSlash: false,
 
