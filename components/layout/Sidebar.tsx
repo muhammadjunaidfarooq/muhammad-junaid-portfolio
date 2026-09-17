@@ -42,6 +42,7 @@ export default function Sidebar() {
             quality={100}
             width={imageSize}
             height={imageSize}
+            unoptimized
             className="avatar-image object-cover object-center"
           />
         </figure>
