@@ -396,7 +396,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 180px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -416,6 +416,11 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.avatar-box img {
+  width: 80px;
 }
 
 .info-content .name {
@@ -452,6 +457,14 @@ main {
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
+}
+
+.info_more-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.active .info_more-btn svg {
+  transform: rotate(180deg);
 }
 
 .info_more-btn::before {
@@ -525,7 +538,7 @@ main {
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   padding-bottom: 4px;
@@ -582,8 +595,14 @@ main {
 }
 
 /*-----------------------------------*\
-  #NAVBAR BRAND (orb, links home)
+  #NAVBAR BRAND (orb, decorative)
 \*-----------------------------------*/
+
+.navbar-brand-wrap {
+  display: flex;
+  align-items: center;
+  padding: 20px 7px;
+}
 
 .navbar-brand {
   transform-origin: 50% 50%;
@@ -591,17 +610,6 @@ main {
   animation:
     orb-spin 4.8s infinite,
     orb-glow 4.8s ease-in-out infinite;
-}
-
-/* Hover/focus: keep the spin going, add a persistent amplified halo via the
-   parent link's filter so it stacks with (rather than overrides) the orb's own
-   animated drop-shadow. */
-.navbar-link:has(.navbar-brand):hover,
-.navbar-link:has(.navbar-brand):focus-visible {
-  filter:
-    drop-shadow(0 0 6px hsla(258, 88%, 66%, 0.55))
-    drop-shadow(0 0 18px hsla(280, 85%, 65%, 0.40))
-    drop-shadow(0 0 32px hsla(200, 100%, 60%, 0.28));
 }
 
 /*
@@ -2497,10 +2505,6 @@ textarea.form-input::-webkit-resizer {
   .separator:last-of-type {
     margin: 15px 0;
     opacity: 0;
-  }
-
-  .social-list {
-    justify-content: center;
   }
 
   /**

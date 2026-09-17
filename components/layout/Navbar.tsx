@@ -36,22 +36,15 @@ export default function Navbar() {
             </Link>
           </li>
         ))}
-        <li className="navbar-item">
-          <Link
-            href="/"
-            className="navbar-link"
-            aria-label="Portfolio Home"
-            onClick={() => setActiveItem('About')}
-          >
-            <Image
-              src="/images/orb.svg"
-              alt=""
-              width={24}
-              height={24}
-              className="navbar-brand"
-              aria-hidden="true"
-            />
-          </Link>
+        <li className="navbar-item navbar-brand-wrap">
+          <Image
+            src="/images/orb.svg"
+            alt=""
+            width={24}
+            height={24}
+            className="navbar-brand"
+            aria-hidden="true"
+          />
         </li>
       </ul>
     </nav>
