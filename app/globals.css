@@ -423,6 +423,10 @@ main {
   width: 80px;
 }
 
+.info-content {
+  min-width: 0;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
@@ -2090,6 +2094,11 @@ textarea.form-input::-webkit-resizer {
   .navbar-item:nth-child(3) { order: 4; }
   .navbar-item:nth-child(4) { order: 5; }
   .navbar-item:nth-child(5) { order: 3; }
+
+  .navbar-brand-wrap {
+    padding: 0;
+    justify-content: center;
+  }
 
   .navbar-link {
     position: relative;
