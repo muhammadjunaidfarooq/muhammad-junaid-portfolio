@@ -1,5 +1,5 @@
 export const PROJECT_TYPE_LABELS: Record<string, string> = {
-  job: 'Job / Internship Opportunity',
+  job: 'Job Opportunity',
   freelance: 'Freelance / Collaboration',
   other: 'Other',
 };
@@ -12,6 +12,6 @@ export const TIMELINE_LABELS: Record<string, string> = {
 
 export const BUDGET_LABELS: Record<string, string> = {
   na: 'Not applicable',
-  under25: 'Under $25k',
-  '25plus': '$25k+',
+  under5: 'Under $5k',
+  '5plus': '$5k+',
 };

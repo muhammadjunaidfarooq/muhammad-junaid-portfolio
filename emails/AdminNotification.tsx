@@ -33,7 +33,7 @@ type PriorityBadge = {
 };
 
 const getPriorityBadge = (budget: string, timeline: string): PriorityBadge => {
-  if (budget === '25plus') {
+  if (budget === '5plus') {
     return { label: '🔥 HIGH-BUDGET LEAD', style: badgeHigh };
   }
   if (timeline === '1m') {
@@ -193,7 +193,7 @@ AdminNotificationEmail.PreviewProps = {
   email: 'jane@example.com',
   projectType: 'job',
   timeline: '1m',
-  budget: '25plus',
+  budget: '5plus',
   message:
     'We need an AI-powered document analysis tool for internal use. Roughly 50 employees, needs SSO, integrates with our existing Google Drive. Timeline is tight because of a Q2 board demo.',
   requirements:

@@ -11,7 +11,6 @@ interface FormState {
   projectType: string;
   timeline: string;
   budget: string;
-  requirements: string;
   honeypot?: string;
 }
 
@@ -21,7 +20,7 @@ interface FormStatus {
 }
 
 const PROJECT_TYPE_LABELS: { [key: string]: string } = {
-  'job': 'Job / Internship Opportunity',
+  'job': 'Job Opportunity',
   'freelance': 'Freelance / Collaboration',
   'other': 'Other'
 };
@@ -34,7 +33,6 @@ export default function Contact() {
     projectType: '',
     timeline: '',
     budget: '',
-    requirements: '',
     honeypot: ''
   });
 
@@ -51,7 +49,6 @@ export default function Contact() {
       projectType: '',
       timeline: '',
       budget: '',
-      requirements: '',
       honeypot: ''
     });
     setSliderValue(0);
@@ -121,7 +118,6 @@ export default function Contact() {
           timeline: formData.timeline,
           budget: formData.budget,
           message: formData.message,
-          requirements: formData.requirements || '',
         }),
       });
 
@@ -268,7 +264,7 @@ export default function Contact() {
               className="form-select"
             >
               <option value="">What brings you here?</option>
-              <option value="job">Job / Internship Opportunity</option>
+              <option value="job">Job Opportunity</option>
               <option value="freelance">Freelance / Collaboration</option>
               <option value="other">Other</option>
             </select>
@@ -301,10 +297,10 @@ export default function Contact() {
               onChange={(e) => setFormData(prev => ({ ...prev, budget: e.target.value }))}
               className="form-select"
             >
-              <option value="">Budget / compensation (optional context)</option>
+              <option value="">Budget</option>
               <option value="na">Not applicable</option>
-              <option value="under25">Under $25k</option>
-              <option value="25plus">$25k+</option>
+              <option value="under5">Under $5k</option>
+              <option value="5plus">$5k+</option>
             </select>
           </motion.div>
 
@@ -324,24 +320,6 @@ export default function Contact() {
               resize-y disabled:opacity-60 disabled:cursor-not-allowed"
               value={formData.message}
               onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-            />
-          </motion.div>
-
-          {/* Special Requirements */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-          >
-            <textarea
-              name="requirements"
-              placeholder="Anything else I should know? (role/company link, tech stack, requirements, etc.)"
-              disabled={isLoading}
-              className="w-full min-h-[80px] bg-transparent text-[var(--white-2)] text-sm p-4 
-              border border-[var(--jet)] rounded-xl outline-none focus:border-[var(--orange-yellow-crayola)]
-              resize-y disabled:opacity-60 disabled:cursor-not-allowed"
-              value={formData.requirements}
-              onChange={(e) => setFormData(prev => ({ ...prev, requirements: e.target.value }))}
             />
           </motion.div>
 
