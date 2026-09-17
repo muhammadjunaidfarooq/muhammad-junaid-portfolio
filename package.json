@@ -1,0 +1,60 @@
+{
+  "name": "muhammad-junaid-farooq-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal portfolio of Muhammad Junaid Farooq — AI/ML Engineer and Software Engineering graduate.",
+  "author": "Muhammad Junaid Farooq <junaidfarooq.pk@gmail.com>",
+  "homepage": "https://muhammadjunaid-swe.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammadjunaidfarooq/muhammad-junaid-portfolio"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "ai-ml-engineer",
+    "software-engineer",
+    "full-stack"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@radix-ui/react-hover-card": "^1.1.15",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@react-email/components": "^0.5.7",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.453.0",
+    "motion": "^12.23.22",
+    "next": "^14.2.28",
+    "qss": "^3.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-email": "^4.3.1",
+    "react-icons": "^5.3.0",
+    "resend": "^6.2.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@react-email/preview-server": "^4.3.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitest/coverage-v8": "^4.1.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.16",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "vitest": "^4.1.4"
+  }
+}
