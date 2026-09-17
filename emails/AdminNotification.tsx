@@ -60,7 +60,10 @@ export const AdminNotificationEmail = ({
   const priority = getPriorityBadge(budget, timeline);
 
   const replySubject = encodeURIComponent(`Re: your ${projectTypeLabel} inquiry`);
-  const replyMailto = `mailto:${email}?subject=${replySubject}`;
+  const replyBody = encodeURIComponent(
+    `Hi ${firstName},\n\nThanks for reaching out about your ${projectTypeLabel} inquiry — really appreciate you taking the time to fill out the form.\n\n\n\nBest,\nMuhammad Junaid Farooq`
+  );
+  const replyMailto = `mailto:${email}?subject=${replySubject}&body=${replyBody}`;
 
   return (
     <Html>
