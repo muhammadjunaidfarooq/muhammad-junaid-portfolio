@@ -396,13 +396,8 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 180px;
   overflow: hidden;
   transition: var(--transition-2);
-}
-
-.sidebar.active {
-  max-height: 405px;
 }
 
 .sidebar-info {
@@ -496,12 +491,15 @@ main {
 }
 
 .sidebar-info_more {
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
+  overflow: hidden;
   transition: var(--transition-2);
 }
 
 .sidebar.active .sidebar-info_more {
+  max-height: 260px;
   opacity: 1;
   visibility: visible;
 }
@@ -1681,12 +1679,11 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
-    max-height: 180px;
     margin-bottom: 30px;
   }
 
-  .sidebar.active {
-    max-height: 584px;
+  .sidebar.active .sidebar-info_more {
+    max-height: 360px;
   }
 
   .sidebar-info {
@@ -2491,6 +2488,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .sidebar-info_more {
+    max-height: none;
     opacity: 1;
     visibility: visible;
   }
