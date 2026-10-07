@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Briefcase, Code } from 'lucide-react';
+import { BookOpen, Briefcase, Code, Award } from 'lucide-react';
 import { TimelineItem, DescriptionItem, Link } from '@/types';
 import { LinkPreview } from '@/components/ui/link-preview';
 import React from 'react';
 
 interface TimelineProps {
   title: string;
-  icon: "book" | "briefcase" | "code-slash";
+  icon: "book" | "briefcase" | "code-slash" | "award";
   items: TimelineItem[];
 }
 
 export const Timeline = ({ title, icon, items }: TimelineProps) => {
-  const Icon = icon === "book" ? BookOpen : icon === "code-slash" ? Code : Briefcase;
+  const Icon = icon === "book" ? BookOpen : icon === "code-slash" ? Code : icon === "award" ? Award : Briefcase;
 
   const renderLinks = (links: Link[], separator: string = " ") => {
     return links.map((link, index) => (

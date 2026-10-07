@@ -51,7 +51,7 @@ export default function Sidebar() {
           <h1 className="name" title="Muhammad Junaid Farooq">
             Muhammad Junaid Farooq
           </h1>
-          <p className="title">AI/ML Engineer | Software Engineering Graduate</p>
+          <p className="title">AI/ML Trainee @ NETSOL | Full-Stack Developer</p>
         </div>
 
         {shouldShowButton && (

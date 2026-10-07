@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { SkillBar } from "../shared/SkillBar";
 import { Timeline } from "../shared/Timeline";
 import { Download } from "lucide-react";
-import { EDUCATION, PROFESSIONAL_EXPERIENCE, TECH_STACK, CERTIFICATIONS, SKILLS } from "@/lib/constants";
+import { EDUCATION, PROFESSIONAL_EXPERIENCE, TECH_STACK, CERTIFICATIONS, HONORS, SKILLS } from "@/lib/constants";
 
 export default function Resume() {
   const handleDownload = () => {
@@ -100,6 +100,18 @@ export default function Resume() {
           title="Certifications"
           icon="book"
           items={CERTIFICATIONS}
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.55 }}
+      >
+        <Timeline
+          title="Honors & Awards"
+          icon="award"
+          items={HONORS}
         />
       </motion.div>
 

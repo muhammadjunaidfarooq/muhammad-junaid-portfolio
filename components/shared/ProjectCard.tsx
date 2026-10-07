@@ -1,14 +1,22 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Eye, FolderGit2 } from 'lucide-react';
+import { Eye, FolderGit2, Construction } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { ProjectModal } from './ProjectModal';
 
 interface ProjectCardProps {
   title: string;
   category: string;
   image: string;
   link: string;
+  status?: string;
+  description?: string;
+  tech?: string[];
+  expected?: string;
+  live?: string;
+  github?: string;
+  features?: string[];
   index: number;
   className?: string;
 }
@@ -58,10 +66,19 @@ export const ProjectCard = ({
   category,
   image,
   link,
+  status,
+  description,
+  tech,
+  expected,
+  live,
+  github,
+  features,
   index,
   className
 }: ProjectCardProps) => {
   const [imgError, setImgError] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const inProgress = status === "in-progress";
 
   return (
     <motion.div
@@ -73,10 +90,12 @@ export const ProjectCard = ({
       className={cn("group cursor-pointer", className)}
     >
       <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
+        href={link || undefined}
         className="block"
+        role="button"
+        tabIndex={0}
+        onClick={(e) => { e.preventDefault(); setModalOpen(true); }}
+        onKeyDown={(e) => { if (e.key === "Enter") setModalOpen(true); }}
       >
         <div className="relative mb-4 rounded-xl overflow-hidden">
           <motion.div 
@@ -89,8 +108,15 @@ export const ProjectCard = ({
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
               bg-[var(--jet)] text-[var(--orange-yellow-crayola)] p-4 rounded-xl z-20"
           >
-            <Eye size={24} />
+            {inProgress ? <Construction size={24} /> : <Eye size={24} />}
           </motion.div>
+
+          {inProgress && (
+            <span className="absolute top-3 left-3 z-20 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg
+              text-xs font-medium bg-[var(--jet)] text-[var(--orange-yellow-crayola)]">
+              <Construction size={12} /> Under Development
+            </span>
+          )}
           
           <motion.div variants={imageVariants}>
             {imgError ? (
@@ -124,6 +150,12 @@ export const ProjectCard = ({
           </p>
         </motion.div>
       </a>
+
+      <ProjectModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        project={{ title, category, image, description, features, tech, live, github, expected, inProgress }}
+      />
     </motion.div>
   );
 };

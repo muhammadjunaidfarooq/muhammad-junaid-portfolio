@@ -20,7 +20,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://muhammadjunaidfarooq.vercel.app'),
   title: 'Muhammad Junaid Farooq — Portfolio',
-  description: "I'm Muhammad Junaid Farooq, an AI/ML Engineer and Software Engineering graduate with a strong foundation in full-stack development (MERN stack + Next.js), now expanding into AI/ML, Deep Learning, Generative AI, and Computer Vision.",
+  description: "Muhammad Junaid Farooq — AI/ML Trainee at NETSOL and Full-Stack Developer. Software Engineering graduate (CGPA 3.8) building full-stack web apps with MERN and Next.js, and machine learning projects with Python and FastAPI.",
   authors: [{ name: "Muhammad Junaid Farooq" }],
   icons: {
     icon: '/images/orb.svg',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   // Open Graph
   openGraph: {
     title: 'Muhammad Junaid Farooq — Portfolio',
-    description: "I'm Muhammad Junaid Farooq, an AI/ML Engineer and Software Engineering graduate with a strong foundation in full-stack development (MERN stack + Next.js), now expanding into AI/ML...",
+    description: "AI/ML Trainee at NETSOL and Full-Stack Developer. Building full-stack web apps with MERN and Next.js, and machine learning projects with Python and FastAPI.",
     url: 'https://muhammadjunaidfarooq.vercel.app',
     siteName: "Muhammad Junaid Farooq's Portfolio",
     images: '/images/og-image.png',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Muhammad Junaid Farooq — Portfolio',
-    description: "I'm Muhammad Junaid Farooq, an AI/ML Engineer and Software Engineering graduate with a strong foundation in full-stack development (MERN stack + Next.js), now expanding into AI/ML...",
+    description: "AI/ML Trainee at NETSOL and Full-Stack Developer. Building full-stack web apps with MERN and Next.js, and machine learning projects with Python and FastAPI.",
     images: '/images/og-image.png',
   },
 };
